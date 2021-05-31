@@ -1,0 +1,6 @@
+{
+  "prefix": "sessionLogout",
+  "paths": {
+    "sessionLogout": "."
+  }
+}
