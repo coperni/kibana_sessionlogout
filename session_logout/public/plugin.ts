@@ -20,12 +20,12 @@ export class SessionLogoutPlugin
           !window.location.pathname.includes('login') &&
           (thisTime - lastActiveTime) * MILLISEC_TO_MIN >= config.inactivity_timeout_min
         ) {
-          window.location.href = '/app/login?nextUrl=%2Fapp%2Fhome';
+          window.location.href = '/auth/logout';
         }
       }
       setInterval(function () {
         sessionTimeout();
-      }, 1000);
+      }, 30000);
     });
 
     // Return methods that should be available to other plugins
